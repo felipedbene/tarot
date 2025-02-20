@@ -128,7 +128,7 @@ def ask_tarot(user_question):
     print(reading)
     
     print("\n🎥 Generating your mystical tarot video...")
-    video_url = generate_sora_video(user_question, drawn_cards, reading)
+    #video_url = generate_sora_video(user_question, drawn_cards, reading)
 
     print(f"\n✨ Your tarot video is ready! Watch it here: {video_url}")
 

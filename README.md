@@ -71,7 +71,7 @@ python3 tarot_reader.py "Should I change my career?"
    - The final reading includes **a structured summary**.
 
 ## 🏗️ Future Enhancements
-- ✅ Add reversed tarot card meanings.
+- ~✅ Add reversed tarot card meanings.~
 - ✅ Implement more spread types (Celtic Cross, Love, etc.).
 - ✅ Create a **web version** for tarot readings online.
 - ✅ Build a **Discord bot** for community tarot readings.

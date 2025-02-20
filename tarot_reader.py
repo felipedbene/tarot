@@ -19,6 +19,9 @@ TAROT_DECK = [
     "Judgment", "The World"
 ] + [f"{suit} {rank}" for suit in ["Cups", "Wands", "Swords", "Pentacles"]
      for rank in ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Page", "Knight", "Queen", "King"]]
+
+TAROT_DECK += [f"Reverse {card}" for card in TAROT_DECK]
+
 def call_bedrock(prompt, model_id):
     """Calls Amazon Bedrock correctly for text (Claude) and video (Luma Ray)."""
 

@@ -83,16 +83,24 @@ def tarot_reading(cards, user_question, spread_size):
     """Uses Claude AI to interpret the tarot cards in relation to the user's concern, embedding spread reasoning."""
 
     spread_reasoning_prompt = (
+        "You are an experienced tarot reader with over 20 years of expertise in divination, symbolism, and intuitive readings. "
+        "You deeply understand the historical significance of tarot spreads and how they apply to different types of questions. "
         f"The user asked: '{user_question}'. "
-        f"You determined that a {spread_size}-card spread is best. "
-        "Briefly explain why this is the best choice, in a way that flows naturally into the tarot reading."
+        f"You determined that a {spread_size}-card spread is the most suitable choice. "
+        "Explain why this spread size is ideal for their question in a way that flows naturally into the reading, as if you were guiding a real client."
     )
     spread_reasoning = call_bedrock(spread_reasoning_prompt, TEXT_MODEL_ID)
 
     prompt = (
-        f"The user asked: '{user_question}'. They drew these tarot cards: {', '.join(cards)}. "
-        f"{spread_reasoning} Now, provide a detailed interpretation of each card and how it relates to their question. "
-        "Then, summarize the overall reading with key takeaways."
+        "You are an experienced tarot reader with a deep understanding of esoteric wisdom, divination, and spiritual guidance. "
+        "You are reading for a querent (the person asking the question). "
+        f"The querent's question is: '{user_question}'. "
+        f"A {spread_size}-card spread was chosen because: {spread_reasoning} "
+        "Now, interpret the reading by analyzing each of the following tarot cards in the context of their question: "
+        f"{', '.join(cards)}. "
+        "For each card, provide a clear, insightful, and contextually relevant interpretation. "
+        "Then, conclude with a structured summary, highlighting key insights and takeaways from the reading. "
+        "Your response should be engaging, intuitive, and sound like a genuine tarot reading session, helping the querent find clarity and direction."
     )
 
     return call_bedrock(prompt, TEXT_MODEL_ID)

@@ -2,6 +2,9 @@
 
 Welcome to **Tarot Reader CLI**, a simple yet powerful command-line tool that provides **AI-generated tarot readings** using **Claude 3.5 Sonnet** via **Amazon Bedrock**. 
 
+## Screenshot
+![Screenshot](ss1.png)
+
 This tool allows users to ask **career, life, or spiritual questions**, and the AI will:
 1. Determine whether a **3-card or 5-card tarot spread** is best for the question.
 2. Draw the appropriate number of cards **randomly from a full tarot deck**.

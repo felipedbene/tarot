@@ -1,0 +1,7 @@
+[project]
+name = "tarot"
+version = "0.1.0"
+description = "If you are curious what GenAI can do about your future, you need to run this"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
